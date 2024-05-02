@@ -7,19 +7,25 @@ public class Flight  {
     private float price;
     private int departureTime;
     private int LandingTime;
-    //private List <Traveler> passengers;
+    private List <Traveler> passengers;
+    private String destination;
 
-    public Flight(String flightcode, boolean iscancelled, float price, int departureTime, int LandingTime ) {
+    public Flight(String flightcode, boolean iscancelled, float price, int departureTime, int LandingTime , List <Traveler> passengers,String destination ) {
         this.flightcode = flightcode;
         this.iscancelled = iscancelled;
         this.price = price;
         this.departureTime = departureTime;
         this.LandingTime = LandingTime;
+        this.destination=destination;
         
     }
 
     public int getdepartureTime() {
         return departureTime;
+    }
+
+    public String getdetination() {
+        return destination;
     }
 
     public int getFlightTime() {
@@ -67,7 +73,16 @@ public class Flight  {
     }
 
     public void addPassenger(Traveler passenger) {
-        flightPassengers.add(customer);
+        passengers.add(passenger);
     }
 
+    public int getNumPassengers() {
+        return passengers.size();
+    }
+
+    public void setFlightNumber(String newname) {
+        this.flightcode = newname;
+
+
+    }
 }

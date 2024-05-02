@@ -2,6 +2,7 @@ import java.util.*;
 
 public class Airline {
    private  String name;
+   private List <Subcompanys> subcompanys;
    private List <Flight> flights;
    private List <Airline> subAirlines;
    private List <Employee> Employee;
