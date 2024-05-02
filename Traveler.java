@@ -23,4 +23,8 @@ public class Traveler {
         this.flightName = flightName;
     }
 
+    public void Notification(String message) {
+        System.out.println(message);
+    }
+
 }

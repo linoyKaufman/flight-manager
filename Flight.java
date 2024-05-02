@@ -83,6 +83,7 @@ public class Flight  {
     public void setFlightNumber(String newname) {
         this.flightcode = newname;
 
-
     }
+     
+   
 }
