@@ -1,18 +1,20 @@
-public class flight  {
+import java.util.*;
+
+
+public class Flight  {
     private String flightcode;
     private boolean iscancelled;
     private float price;
     private int departureTime;
     private int LandingTime;
-    List<Traveler> passengers;
+    //private List <Traveler> passengers;
 
-    public Flight(String flightcode, boolean iscancelled, float price, int departureTime, int LandingTime ,List<Traveler> passengers) {
-        name = flightcode;
-        iscancelled = iscancelled;
-        price = price;
-        departureTime = departureTime;
-        LandingTime = LandingTime;
-        passengers= passengers;
+    public Flight(String flightcode, boolean iscancelled, float price, int departureTime, int LandingTime ) {
+        this.flightcode = flightcode;
+        this.iscancelled = iscancelled;
+        this.price = price;
+        this.departureTime = departureTime;
+        this.LandingTime = LandingTime;
         
     }
 
@@ -25,7 +27,7 @@ public class flight  {
         return flightTime;
     }
 
-    public int getPrice() {
+    public float getPrice() {
         return price;
     }
 
@@ -34,34 +36,38 @@ public class flight  {
     }
 
     public String getName() {
-        return name;
+        return flightcode;
     }
 
-    public void setPrice(int price){
+    public void setPrice(float price){
         this.price = price;
-        notifyObservers();
+       // notifyObservers();
     }
 
     public void iscancelled(boolean iscancelled ){ //fix
-        this.seatsAvailable = seatsAvailable;
-        notifyObservers();
+        
+        
     }
 
     public void setDepartureTime(int newdepartureTime){
         int delay = newdepartureTime - this.departureTime;
         this.LandingTime = this.LandingTime + delay;
         this.departureTime = newdepartureTime;
-        
-        this.flightTime = flightTime(this.departureTime, this.LandingTime)
-        notifyObservers();
+        //notifyObservers();
 
     }
-
-
 
     public String toString() {
-        return  this.id ;
+        return  this.flightcode ;
+    }
+    
+    public void setPrice(int price){
+        this.price=price;
+       // notifyObservers();
     }
 
+    public void addPassenger(Traveler passenger) {
+        flightPassengers.add(customer);
+    }
 
 }

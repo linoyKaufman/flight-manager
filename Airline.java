@@ -1,8 +1,10 @@
-public class airline {
+import java.util.*;
+
+public class Airline {
    private  String name;
-   private list<Flight> flights
-   private list<airline> subAirlines
-   private list<Employee> employees
+   private List <Flight> flights;
+   private List <Airline> subAirlines;
+   private List <Employee> Employee;
 
 
     public Airline(String name){
@@ -14,18 +16,18 @@ public class airline {
     }
 
     public void addemployee(Employee fl){
-        flights.add(fl);
+        Employee.add(fl);
     }
 
     public void addSubAirline(Airline air){
         subAirlines.add(air);
     }
 
-    public list<Flight> getFlights(){
+    public List<Flight> getFlights(){
         return flights;
     }
 
-    public list<airline> getSubAirlines(){
+    public List<Airline> getSubAirlines(){
         return subAirlines;
     }
 
