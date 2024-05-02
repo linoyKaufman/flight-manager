@@ -1,0 +1,36 @@
+public class airline {
+   private  String name;
+   private list<Flight> flights
+   private list<airline> subAirlines
+   private list<Employee> employees
+
+
+    public Airline(String name){
+        this.name = name;
+    }
+
+    public void addflight(Flight fl){
+        flights.add(fl);
+    }
+
+    public void addemployee(Employee fl){
+        flights.add(fl);
+    }
+
+    public void addSubAirline(Airline air){
+        subAirlines.add(air);
+    }
+
+    public list<Flight> getFlights(){
+        return flights;
+    }
+
+    public list<airline> getSubAirlines(){
+        return subAirlines;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+}

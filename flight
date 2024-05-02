@@ -1,0 +1,67 @@
+public class flight  {
+    private String flightcode;
+    private boolean iscancelled;
+    private float price;
+    private int departureTime;
+    private int LandingTime;
+    List<Traveler> passengers;
+
+    public Flight(String flightcode, boolean iscancelled, float price, int departureTime, int LandingTime ,List<Traveler> passengers) {
+        name = flightcode;
+        iscancelled = iscancelled;
+        price = price;
+        departureTime = departureTime;
+        LandingTime = LandingTime;
+        passengers= passengers;
+        
+    }
+
+    public int getdepartureTime() {
+        return departureTime;
+    }
+
+    public int getFlightTime() {
+       int flightTime = LandingTime - departureTime;
+        return flightTime;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public boolean iscancelled() {
+        return iscancelled;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setPrice(int price){
+        this.price = price;
+        notifyObservers();
+    }
+
+    public void iscancelled(boolean iscancelled ){ //fix
+        this.seatsAvailable = seatsAvailable;
+        notifyObservers();
+    }
+
+    public void setDepartureTime(int newdepartureTime){
+        int delay = newdepartureTime - this.departureTime;
+        this.LandingTime = this.LandingTime + delay;
+        this.departureTime = newdepartureTime;
+        
+        this.flightTime = flightTime(this.departureTime, this.LandingTime)
+        notifyObservers();
+
+    }
+
+
+
+    public String toString() {
+        return  this.id ;
+    }
+
+
+}
