@@ -1,4 +1,9 @@
-public class Traveler {
+package persons;
+
+import airport.Flight;
+import flightchanges.Observer;
+
+public class Traveler implements Observer{
     private String name;
     private String flightName;
 
@@ -23,8 +28,15 @@ public class Traveler {
         this.flightName = flightName;
     }
 
-    public void Notification(String message) {
+    public void register (Flight flight){
+        flight.subscribe(this);
+    }
+
+    @Override
+    public void update(String message) {
         System.out.println(message);
     }
+
+    
 
 }

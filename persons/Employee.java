@@ -1,10 +1,15 @@
-public class Employee {
+
+package persons;
+
+import flightchanges.Observer;
+
+public class Employee implements Observer {
     private String firstName;
     private String lastName;
     private int employeeID;
 
     
-    public Employee(String firstName, String lastName, int employeeID) {
+    public Employee(String firstName, String lastName, int employeeID)  {
         this.firstName = firstName;
         this.lastName = lastName;
         this.employeeID = employeeID;
@@ -39,5 +44,10 @@ public class Employee {
         System.out.println("First Name: " + firstName);
         System.out.println("Last Name: " + lastName);
         System.out.println("Employee ID: " + employeeID);
+    }
+
+    @Override
+    public void update(String message) {
+        System.out.println(message);
     }
 }

@@ -1,7 +1,8 @@
+package airport;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Subcompanys {
+public class Subcompanys implements AirlineInterface {
     private String companyName;
     private List<String> flights;
 
@@ -44,5 +45,11 @@ public class Subcompanys {
         company.removeFlight("Flight 2");
 
         company.printFlights();
+    }
+
+    @Override
+    public void printdetails() {
+
+        System.out.println("subcompany : " + this.companyName );
     }
 }

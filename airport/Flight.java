@@ -1,7 +1,15 @@
+
+package airport;
 import java.util.*;
 
+import flightchanges.FlightChangeObserver;
+import persons.Traveler;
+import flightchanges.Observer;
 
-public class Flight  {
+
+
+
+public class Flight implements FlightChangeObserver {
     private String flightcode;
     private boolean iscancelled;
     private float price;
@@ -9,6 +17,7 @@ public class Flight  {
     private int LandingTime;
     private List <Traveler> passengers;
     private String destination;
+    private List <Observer> subscribers;
 
     public Flight(String flightcode, boolean iscancelled, float price, int departureTime, int LandingTime , List <Traveler> passengers,String destination ) {
         this.flightcode = flightcode;
@@ -17,6 +26,8 @@ public class Flight  {
         this.departureTime = departureTime;
         this.LandingTime = LandingTime;
         this.destination=destination;
+        this.passengers = new ArrayList<>();
+        this.subscribers = new ArrayList<>();
         
     }
 
@@ -47,12 +58,12 @@ public class Flight  {
 
     public void setPrice(float price){
         this.price = price;
-       // notifyObservers();
+        notifySubscribers("price change");
     }
 
-    public void iscancelled(boolean iscancelled ){ //fix
-        
-        
+    public void cancelleflight(){ 
+        iscancelled=true;
+        notifySubscribers("flight cancelled");
     }
 
     public void setDepartureTime(int newdepartureTime){
@@ -63,13 +74,9 @@ public class Flight  {
 
     }
 
+    @Override
     public String toString() {
-        return  this.flightcode ;
-    }
-    
-    public void setPrice(int price){
-        this.price=price;
-       // notifyObservers();
+        return  "flight code :" + this.flightcode ;
     }
 
     public void addPassenger(Traveler passenger) {
@@ -84,6 +91,31 @@ public class Flight  {
         this.flightcode = newname;
 
     }
-     
+
+    @Override
+    public void subscribe(Observer observer) {
+       subscribers.add(observer);
+    }
+
+    @Override
+    public void unsubscribe(Observer observer) {
+        subscribers.remove(observer);
+    }
+
+    @Override
+    public void notifySubscribers(String message) {
+       for(Observer observer : subscribers){
+        observer.update(message);
+       }
+    }
+    
+    public void addtoflight (Traveler passenger){
+        passengers.add(passenger);
+    }
+    public void removetoflight (Traveler passenger){
+        passengers.remove(passenger);
+    }
+
+  
    
 }
