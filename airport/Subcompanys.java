@@ -33,20 +33,6 @@ public class Subcompanys implements AirlineInterface {
             System.out.println(flight);
         }
     }
-
-    public static void main(String[] args) {
-        Subcompanys company = new Subcompanys("Subsidiary Airlines");
-        company.addFlight("Flight 1");
-        company.addFlight("Flight 2");
-        company.addFlight("Flight 3");
-
-        company.printFlights();
-
-        company.removeFlight("Flight 2");
-
-        company.printFlights();
-    }
-
     @Override
     public void printdetails() {
 

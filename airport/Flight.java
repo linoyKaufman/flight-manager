@@ -58,7 +58,7 @@ public class Flight implements FlightChangeObserver {
 
     public void setPrice(float price){
         this.price = price;
-        notifySubscribers("price change");
+        notifySubscribers("price changed");
     }
 
     public void cancelleflight(){ 
@@ -70,7 +70,7 @@ public class Flight implements FlightChangeObserver {
         int delay = newdepartureTime - this.departureTime;
         this.LandingTime = this.LandingTime + delay;
         this.departureTime = newdepartureTime;
-        //notifyObservers();
+        notifySubscribers("departure time changed");
 
     }
 
