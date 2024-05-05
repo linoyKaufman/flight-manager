@@ -1,8 +1,8 @@
-package search;
+package EX1.search;
 
 import java.util.*;
 
-import airport.Flight;
+import EX1.airport.Flight;
 public class SearchByPriceStrategy implements SearchingStrategy {
     @Override
     public void search(List<Flight> flights, String searchRange ) {

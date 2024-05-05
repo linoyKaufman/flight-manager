@@ -1,6 +1,8 @@
-import staff.Person;
+package EX2.staff;
+import EX2.course.Course;
+import EX2.course.Observer;
 
-public class Student extends Person {
+public class Student extends Person implements StudentActions, Observer {
     
     private int studentId;
     private String subject;
@@ -29,5 +31,23 @@ public class Student extends Person {
         super.displayInfo(); 
         System.out.println("Student ID: " + studentId);
         System.out.println("Major: " + subject);
+    }
+
+
+    @Override
+    public void registertoCourse(Course c1) {
+        c1.addToCourse(this);
+        }    
+
+
+    @Override
+    public void unregistertoCourse(Course c1) {
+        c1.removeFromCourse(this);
+    }
+
+
+    @Override
+    public void update(String message) {
+        System.out.println("dear student : there is a place");
     }
 }

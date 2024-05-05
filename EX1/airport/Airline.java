@@ -1,10 +1,10 @@
-package airport;
+package EX1.airport;
 import java.util.*;
+import EX1.persons.*;
 
-import persons.Employee;
 public class Airline implements AirlineInterface {
    private  String name;
-   private List <AirlineInterface> subcompanys;
+   private List <AirlineInterface> subcompanys;// composite
    private List <Flight> flights;
    private List <Employee> Employee;
 

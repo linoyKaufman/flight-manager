@@ -1,12 +1,10 @@
 
-package airport;
+package EX1.airport;
 import java.util.*;
 
-import flightchanges.FlightChangeObserver;
-import persons.Traveler;
-import flightchanges.Observer;
-
-
+import EX1.flightchanges.FlightChangeObserver;
+import EX1.flightchanges.Observer;
+import EX1.persons.*;
 
 
 public class Flight implements FlightChangeObserver {

@@ -1,5 +1,5 @@
 
-package flightchanges;
+package EX1.flightchanges;
 
 public interface FlightChangeObserver {
     void subscribe(Observer observer);

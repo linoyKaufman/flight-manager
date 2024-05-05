@@ -1,4 +1,4 @@
-package staff;
+package EX2.staff;
 public class Person {
     
     private String name;

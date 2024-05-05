@@ -1,7 +1,7 @@
 
-package persons;
+package EX1.persons;
 
-import flightchanges.Observer;
+import EX1.flightchanges.Observer;
 
 public class Employee implements Observer {
     private String firstName;

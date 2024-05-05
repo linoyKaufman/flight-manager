@@ -1,7 +1,7 @@
-package persons;
+package EX1.persons;
 
-import airport.Flight;
-import flightchanges.Observer;
+import EX1.airport.Flight;
+import EX1.flightchanges.Observer;
 
 public class Traveler implements Observer{
     private String name;

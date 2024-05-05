@@ -1,4 +1,4 @@
-package airport;
+package EX1.airport;
 
 public interface AirlineInterface {
 

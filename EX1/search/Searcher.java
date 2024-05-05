@@ -1,8 +1,8 @@
-package search;
+package EX1.search;
 
 import java.util.*;
 
-import airport.Flight;
+import EX1.airport.Flight;
 public class Searcher {
     private SearchingStrategy strategy;
     public void setStrategy(SearchingStrategy strategy) {
