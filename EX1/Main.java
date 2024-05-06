@@ -21,7 +21,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
         List <Flight> map  = new ArrayList<>();
 
-        Airline elal = new Airline("elal");
+        Airline elal = new Airline("elal"); //  
         AirlineInterface sandor = new Subcompanys("sandor");
         AirlineInterface elalcargo = new Subcompanys("elal cargo");
         elal.addsubcompany(sandor);
