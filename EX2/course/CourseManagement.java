@@ -1,8 +1,6 @@
 package EX2.course;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import EX2.course.*;
 
 
 
@@ -15,7 +13,7 @@ public class CourseManagement {
 
         switch (courseType){
             case "seminar":
-                course = CourseList.computeIfAbsent(courseNum, newCourseNum -> {   //fly wight factory   אם לא קיים תיצור אם קיים תחזיר
+                course = CourseList.computeIfAbsent(courseNum, newCourseNum -> {   
                     return new SeminarCourse( courseName,newCourseNum, maxStudents);
                 });
                 break;

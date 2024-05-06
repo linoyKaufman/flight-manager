@@ -5,10 +5,8 @@ import java.util.List;
 import EX2.staff.Person;
 
 public class SchoolStuffSingeltone {
-    private final int MAX_SIZE_OF_MEMBERS = 100;
+    private final int MAX_SIZE_OF_MEMBERS = 200;
     private static SchoolStuffSingeltone single_instance = null;
-
-   
     private List<Person> members;
 
 
