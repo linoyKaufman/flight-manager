@@ -35,6 +35,8 @@
         // Unregister a student from a course
         linoy.unregistertoCourse(c1);
 
+        //we wants to see that "david" gets a notification that there is a place because "linoy" unregister
+
 
     
 
